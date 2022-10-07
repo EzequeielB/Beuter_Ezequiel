@@ -1,0 +1,17 @@
+
+<html>
+<body>
+<script type="text/javascript">
+Meses= ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+var Comprobar=0;
+do {
+var Nmes = window.prompt("Introduce un número de Mes", 0);
+if(Nmes>0 && Nmes<=12){
+Comprobar=1;
+document.write(Meses[Nmes-1]);
+}    
+} while (Comprobar==0);
+//Siempre que el usuario no ingrese un valor en el prompt el programa le pedira que vuelva a ingresar un nuevo valor. Hasta que usuario ingrese un numero del 1 al 12, los cuales son numeros de meses validos, y el programa le mostrara en pantalla el nombre de mes que le corresponde ese numero
+</script>
+</body>
+</html>
