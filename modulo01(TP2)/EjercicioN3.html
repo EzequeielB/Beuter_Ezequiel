@@ -1,0 +1,18 @@
+<html> 
+<body>
+<script>
+var numero = window.prompt("Introduce un número que quiera saber su factorial", 1);
+    factorizar(numero)
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Función utilizada para factorizar el numero ingresado por el usuario
+function factorizar (NumeroAFactorizar){
+    var resultado=1
+    for(i=NumeroAFactorizar;i>1;i--){
+    var resultado=resultado*i 
+}  
+document.write("El factorial del número ingresado es:"+resultado+"<br>")
+}
+</script>
+</body>
+</html>

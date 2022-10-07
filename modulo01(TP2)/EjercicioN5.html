@@ -1,0 +1,40 @@
+<html> 
+<body>
+<script>
+
+
+var Texto=window.prompt("Introduzca unicamente texto en este espacio", "ABCD");
+
+MayorMenorAmbos(Texto)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Función que recorre un String y determina si esta compuesto solo por mayusculas, minusculas o ambas. Esto en base al resultado de un contrador que suma si una letra es mayuscula y resta si es minuscula. 
+
+function MayorMenorAmbos (Texto){
+    var contador=0
+    for(i=0;i<Texto.length;i++){
+
+                if(Texto.charAt(i)==Texto.charAt(i).toUpperCase()){
+               contador=contador+1
+                }
+                else{
+                    contador=contador-1
+                }
+        }
+
+    switch(true){
+        case contador==Texto.length: document.write("Mayusculas") 
+        break 
+        
+        case contador==-Texto.length: document.write("Minusculas")
+        break
+
+        case contador<Texto.length&&contador>-Texto.length: document.write("Mayusculas y Minusculas")
+        break
+    }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html> 
+<body>
+<script>
+var texto=window.prompt("Introduzca texto en este espacio", "Hola Amigo");
+UbicarVocales(texto)
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Funcion que ubica el orden en el que se encuentran las vocales en un texto y su posicion en el mismo
+function UbicarVocales(Texto){
+    document.write("Del texto "+Texto+" El orden en el que se encuentran y posición de las vocales es: <br>")
+
+    var numero=1
+
+    for(i=0;i<Texto.length;i++){
+    
+        switch(Texto.charAt(i)){
+    
+            case "A": document.write("La "+numero+"° vocal es A y esta en la posición número "+(i+1)+"<br>");numero=numero+1
+            break
+    
+            case "E": document.write("La "+numero+"° vocal es E y esta en la posición número "+(i+1)+"<br>");numero=numero+1
+            break
+    
+            case "I": document.write("La "+numero+"° vocal es I y esta en la posición número "+(i+1)+"<br>");numero=numero+1
+            break
+    
+            case "O": document.write("La "+numero+"° vocal es O y esta en la posición número "+(i+1)+"<br>");numero=numero+1
+            break
+    
+            case "U": document.write("La "+numero+"° vocal es U y esta en la posición número "+(i+1)+"<br>");numero=numero+1
+            break
+    
+            case "a": document.write("La "+numero+"° vocal es a y esta en la posición número "+(i+1)+"<br>");numero=numero+1
+            break
+    
+            case "e": document.write("La "+numero+"° vocal es e y esta en la posición número "+(i+1)+"<br>");numero=numero+1
+            break
+    
+            case "i": document.write("La "+numero+"° vocal es i y esta en la posición número "+(i+1)+"<br>");numero=numero+1
+            break
+    
+            case "o": document.write("La "+numero+"° vocal es o y esta en la posición número "+(i+1)+"<br>");numero=numero+1
+            break
+    
+            case "u": document.write("La "+numero+"° vocal es u y esta en la posición número "+(i+1)+"<br>");numero=numero+1
+            break
+        }
+    }
+}
+</script>
+</body>
+</html>

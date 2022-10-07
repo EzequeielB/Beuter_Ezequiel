@@ -1,0 +1,27 @@
+<html> 
+<body>
+<script>
+NoRepetir(1,100) //El rango que nos pide el ejercicio
+NoRepetir(1,5)//Considero que se aprecia mejor con números bajos
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Función que genera un númeor aleatorio entre el valor minimo y maximo
+function Aleatorio(min, max) {
+    return Math.floor((Math.random() * (max - min + 1)) + min);
+}
+//Función que genera un Array con todos los numeros entre el valor minimo y maximo y los distribuye de manera aleatoria y sin números repetidos
+function NoRepetir(Min,Max){
+    registro=[]
+for(i=Min;i<=Max;i++){
+    Numero=Aleatorio(Min,Max)
+    if(registro.includes(Numero)){
+        i--
+    }
+    else{
+        registro.push(Numero)
+    }
+}
+document.write(registro+"<br>")
+}
+</script>
+</body>
+</html>

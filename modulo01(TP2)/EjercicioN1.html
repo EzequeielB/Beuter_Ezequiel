@@ -1,0 +1,75 @@
+
+<html>
+    <body>
+    <script type="text/javascript">
+    var char
+    var verdadero
+    var valores=[verdadero,false,2,"Hola","Mundo",3,char]
+    var StringArray //Variable destinada a contener unicamente los elementos de tipo String
+    var NumberArray //Variable destinada a contener unicamente los elementos de tipo Number
+
+    document.write("1. Determinar cuál de los elementos de texto es mayor, es decir el que contenga más letras<br> 2. Imprimir los elementos de menor a mayor cantidad de letras <br>")
+
+    FiltrarArrayString(StringArray,valores)
+    
+    document.write("3. Determinar el resultado de las cuatro operaciones matemáticas realizadas con los dos elementos numéricos<br>")
+    FiltrarArrayNumber(NumberArray,valores)
+    
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Funciones:
+//Función que ordenar un Array de unicamente con tipo de dato String, colocando los que tenga menor cantidad de caracteres al inico y los que tengan mas caracteres al final.
+function OrdenarString (ArrayOrdenar){
+    for(j=0;j<ArrayOrdenar.length;j++){
+    for(k=0;k<ArrayOrdenar.length-1;k++){
+        if(ArrayOrdenar[k].length > ArrayOrdenar[k+1].length){
+            var aux=ArrayOrdenar[k]
+            ArrayOrdenar[k]=ArrayOrdenar[k+1]
+            ArrayOrdenar[k+1]=aux   
+}
+}
+}
+}
+//Función que filtra un Array existente y crea uno nuevo integrado unicamente por aquellos elementos que sean un Sting, Lo ordena e imprime en patalla el Array e los elemento con menor cantidad de carcteres y el de mayor cantidad de caracteres
+function FiltrarArrayString (Nombre, ArrayFiltrado){
+    var Nombre=[]
+    for(i=0;i<ArrayFiltrado.length;i++){
+        if(typeof ArrayFiltrado[i]=="string") {
+            Nombre.push(ArrayFiltrado[i])
+}
+}
+OrdenarString(Nombre)
+document.write("El nuevo Array es: " + Nombre+"<br>")
+document.write("La palabra con menor cantidad caracteres es: " + Nombre[0]+"<br>")
+document.write("La palabra con Mayor cantida caracteres es: " + Nombre[Nombre.length-1]+"<br>")
+}
+//Función que opera con los numeros de un array de izquierda a derecha y muestra el resultado de las cuatro operaciones
+function OperarArray(Array){
+    var ResultadoSuma=0; var ResultadoResta=Array[0]; var ResultadoMultiplicación=1; var ResultadoDivisión=Array[0]
+    for(i=0;i<Array.length;i++){
+        ResultadoSuma=ResultadoSuma+Array[i]
+        ResultadoMultiplicación=ResultadoMultiplicación*Array[i]
+        if(i<Array.length-1){
+            ResultadoResta=ResultadoResta-Array[i+1]
+            ResultadoDivisión=ResultadoDivisión/Array[i+1]
+        }
+        
+    }
+    document.write("El resultado de lo suma es: "+ResultadoSuma+"<br>")
+    document.write("El resultado de lo Resta es: "+ResultadoResta+"<br>")
+    document.write("El resultado de lo Multiplicación es: "+ResultadoMultiplicación+"<br>")
+    document.write("El resultado de lo Division es: "+ResultadoDivisión+"<br>")
+}
+//Función que filtra un Array existente y crea uno nuevo integrado unicamente por aquellos elementos que sean un Number y opera con los elementos de izquierda a derecha mostrando en pantalla el nuevo Array y los resultados de las cuatro operaciones
+function FiltrarArrayNumber (Nombre, ArrayFiltrado){
+    var Nombre=[]
+    for(i=0;i<ArrayFiltrado.length;i++){
+        if(typeof ArrayFiltrado[i]=="number") {
+            Nombre.push(ArrayFiltrado[i])
+}
+}
+document.write("El nuevo Array es: " + Nombre+"<br>")
+OperarArray(Nombre)
+}
+    </script>
+    </body>
+    </html>

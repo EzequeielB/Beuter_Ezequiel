@@ -1,0 +1,15 @@
+<html> 
+<body>
+<script>
+var texto=window.prompt("Introduzca texto en este espacio", "Hola Amigo");
+AlRevez(texto)
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Función que escribe el texto que se le ingresa al revez
+function AlRevez(Texto){
+    for(i=Texto.length;i>-1;i--){
+    document.write(Texto.charAt(i))
+}
+}
+</script>
+</body>
+</html>
